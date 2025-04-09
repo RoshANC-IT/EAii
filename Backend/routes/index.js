@@ -1,12 +1,3 @@
-// import express from "express";
-// import userSignUpcontroller from "../controller/userSignUp.js"; // Fix file extension for ES modules
-
-// const router = express.Router();
-
-// router.post("/signUp", userSignUpcontroller);
-
-// export default router;
-
 
 import express from "express";
 // import { singleUpload } from "../middlewares/multer.js";
