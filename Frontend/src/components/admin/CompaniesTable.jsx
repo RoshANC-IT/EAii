@@ -14,7 +14,6 @@ import { Edit2, MoreHorizontal } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-
 function CompaniesTable() {
   const navigate = useNavigate();
   const { companies = [], searchCompanyByText } = useSelector((store) => store.company);

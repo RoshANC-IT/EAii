@@ -47,9 +47,6 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
         try {
             setLoading(true);
             const res = await axios.post(`${USER_API_END_POINT}/profile/update`, formData, {
-        //  const res = await api.post(`${USER_API_END_POINT}/register`, formData, {
-        // http://localhost:8000/api/user/profile/update
-        // const res = await axios.post(`http://localhost:8000/api/user/profile/update`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
@@ -66,7 +63,6 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
             setLoading(false);
         }
         setOpen(false);
-        console.log(input);
     }
     return (
         <div>
