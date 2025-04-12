@@ -27,7 +27,7 @@ const jobSlice = createSlice({
       state.allAppliedJob = action.payload;
     },
     setSearchJobQueryText: (state, action) => {
-      console.log("Updated query in Redux: ", action.payload); // Check if Redux state updates
+      // console.log("Updated query in Redux: ", action.payload); // Check if Redux state updates
       state.searchJobQueryText = action.payload; // Update the query in Redux
     },
   },

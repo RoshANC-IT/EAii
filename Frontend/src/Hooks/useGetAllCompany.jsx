@@ -33,7 +33,7 @@ import { COMPANY_API_END_POINT } from '@/utils/constant';
 import axios from 'axios';
 import { useEffect } from 'react';
 
-function useGetAllCompany(companyId) {
+function useGetAllCompany() {
   const dispatch = useDispatch();
   
   useEffect(() => {

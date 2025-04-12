@@ -5,7 +5,11 @@
   "type": "module",
 "scripts": {
   "dev": "nodemon backend/2index.js",
+<<<<<<< HEAD
 "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend",
+=======
+  "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend",
+>>>>>>> a5d154d (Fix JobSlice import and folder issues)
   "start": "node backend/2index.js"
 }
 ,
