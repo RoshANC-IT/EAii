@@ -6,7 +6,7 @@
 "scripts": {
   "dev": "nodemon backend/2index.js",
   "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-  "start": "nodemon backend/2index.js"
+  "start": "node backend/2index.js"
 }
 ,
   "author": "RoshanChauhan",
