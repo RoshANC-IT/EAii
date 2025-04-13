@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { ArrowLeft } from "lucide-react";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
