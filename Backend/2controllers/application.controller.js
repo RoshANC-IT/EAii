@@ -1,5 +1,5 @@
 import { Application } from "../2models/2application.model.js"; 
-import { Job } from "../2models/2job.model.js";
+import { Job } from "../2models/2Job.model.js";
 
 /*
 **********************
