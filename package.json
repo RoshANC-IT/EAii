@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
 "scripts": {
-  "dev": "nodemon backend/2index.js",
+  "dev": "nodemon backend/index.js",
   "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend",
-  "start": "nodemon backend/2index.js"
+  "start": "nodemon backend/index.js"
 }
 ,
   "author": "RoshanChauhan",

@@ -13,6 +13,7 @@ function Companies() {
   useGetAllCompany(); 
   const disptch=useDispatch();
 
+  // eslint-disable-next-line no-unused-vars
   useEffect((e)=>{
     disptch(searchCompanyByText(input));
     
