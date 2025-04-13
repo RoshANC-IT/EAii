@@ -19,7 +19,7 @@ const  useGetAllAppliedJob =()=>{
             }
         }
         fatchAppliedJobs();
-    },[])
+    },[dispatch])
 }
 
 export default useGetAllAppliedJob;
