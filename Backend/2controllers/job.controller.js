@@ -1,4 +1,4 @@
-import { Job } from "../2models/2job.model.js";
+import { Job } from "../2models/2Job.model.js";
 // admin post krega job
 /*
 **********************
