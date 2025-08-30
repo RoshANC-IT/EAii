@@ -19,20 +19,24 @@ import AdminJobs from './components/admin/AdminJobs';
 import PostJob from './components/admin/PostJob';
 import Applicants from "./components/admin/Applicants"
 import ProtectedRoute from './components/admin/protected';
+import ChatBox from './components/AI/ChatBox';
+// import Content from './components/Pratice/Content';
 
 function App() {
   return (
     <Router>
       <NavBar />
-      <Routes> 
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/jobs" element={<Job />} /> 
         <Route path="/browser" element={<Browser />} />
+        <Route path='/chatGPT' element={<ChatBox/>}></Route>
         <Route path='/description/:id' element={<JobDescription />} />
         <Route path='/Profile' element={<Profile />} />
+      
 
         {/* Admin routes */}
         <Route path='/admin/companies' element={<ProtectedRoute><Companies /></ProtectedRoute>} />

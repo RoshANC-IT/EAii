@@ -30,7 +30,7 @@ const Footer = () => {
             </a>
             <a
               href="https://x.com/RoshanChau55359"
-              className="hover:text-gray-400"
+              
               aria-label="Twitter"
               target="_blank"
               rel="noopener noreferrer"
@@ -41,7 +41,7 @@ const Footer = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/roshan-chauhan-IT/"
-              className="hover:text-gray-400"
+              
               aria-label="LinkedIn"
                target="_blank"
               rel="noopener noreferrer"
@@ -52,7 +52,7 @@ const Footer = () => {
             </a>{" "}
             <a
               href="https://github.com/RoshANC-IT"
-              className="hover:text-gray-400"
+             
               aria-label="GitHub"
               target="_blank"
               rel="noopener noreferrer"

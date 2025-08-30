@@ -8,34 +8,40 @@ import AdminJobsTable from "./AdminJobsTable";
 import useGetAdminAllJobs from "@/Hooks/useGetAdminAllJobs";
 
 const AdminJobs = () => {
-  const [input, setInput] = useState("");  // For capturing the input search query
+  const [input, setInput] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   
-  const { loading, error } = useGetAdminAllJobs();  // Get job fetching status
-  
-  useEffect(() => {// Dispatch action to set search text in Redux
+  const { loading, error } = useGetAdminAllJobs();
+
+  useEffect(() => {
     dispatch(setSearchJobByText(input));
-  }, [input, dispatch]); // Re-run whenever the input changes
+  }, [input, dispatch]);
 
   return (
-    <div>
-      <div className="max-w-6xl mx-auto my-10">
-        <div className="flex items-center justify-between my-5">
+    <div className="max-w-6xl mx-auto my-10 px-4">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 my-5">
 
-          <Input
-            className="w-fit"
-            placeholder="Filter by name, role"
-            onChange={(e) => setInput(e.target.value)}  // Capture input value
-          />
+        <Input
+          className="w-full max-w-sm"
+          placeholder="Filter by name, role"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
 
-          <Button onClick={() => navigate("/admin/job/create")}>New Jobs</Button>
+        <Button onClick={() => navigate("/admin/job/create")}>
+          New Jobs
+        </Button>
 
-        </div>
-
-        {/* Loading and error handling */}
-        {loading ? <p>Loading...</p> : error ? <p>{error}</p> : <AdminJobsTable />}
       </div>
+
+      {loading ? (
+        <p className="text-center text-gray-600">Loading jobs...</p>
+      ) : error ? (
+        <p className="text-center text-red-600">{error}</p>
+      ) : (
+        <AdminJobsTable />
+      )}
     </div>
   );
 };

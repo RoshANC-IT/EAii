@@ -6,18 +6,18 @@ import { useNavigate } from "react-router-dom";
 import { setSearchJobQueryText } from "./redux/jobSlice";
 
 function HeroSection() {
-  const [query, setQuery] = useState(""); // State to store search input
-  const dispatch = useDispatch(); // Dispatch to Redux store
-  const navigate = useNavigate(); // Hook to navigate
+  const [query, setQuery] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  // Handler for the search button
   const searchJobHandler = () => {
-    dispatch(setSearchJobQueryText(query)); // Dispatch the query text
-    navigate("/browser"); // Navigate to the browser page
+    if (!query.trim()) return; // Optional: prevent empty searches
+    dispatch(setSearchJobQueryText(query));
+    navigate("/browser");
   };
 
   return (
-    <div className="text-center">
+    <div className="text-center px-4">
       <div className="flex py-2 gap-5 my-1"></div>
       <span className="px-4 py-4 rounded-full bg-gray-100 text-[#d3453b] font-medium">
         No: 1 Job Hunt Website
@@ -34,22 +34,22 @@ function HeroSection() {
       </p>
 
       {/* Search Bar */}
-      <div className="flex w-[40%] shadow-2xl p-3 rounded items-center gap-4 mx-auto ">
+      <div className="flex w-full max-w-md sm:w-3/4 md:w-2/5 shadow-2xl p-3 rounded items-center gap-4 mx-auto">
         <input
           type="text"
           placeholder="Find your Dream's Jobs"
-          className="w-full outline-none border-none  bg-transparent"
-          onChange={(e) => {
-            console.log("Input value: ", e.target.value); // Log input value when user types
-            setQuery(e.target.value); // Update state
+          className="w-full outline-none border-none bg-transparent text-black dark:text-white"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") searchJobHandler();
           }}
+          aria-label="Job search input"
         />
-
-        <Button onClick={searchJobHandler}>
+        <Button onClick={searchJobHandler} aria-label="Search Jobs">
           <Search className="h-5 w-5" />
         </Button>
       </div>
-      {/* Search Bar End */}
     </div>
   );
 }
